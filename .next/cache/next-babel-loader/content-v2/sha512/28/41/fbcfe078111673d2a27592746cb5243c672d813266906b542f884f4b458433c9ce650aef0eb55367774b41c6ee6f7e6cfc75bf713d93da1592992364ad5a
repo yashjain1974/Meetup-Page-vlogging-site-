@@ -1,0 +1,1 @@
+{"ast":null,"code":"import MainNavigation from \"../components/layout/MainNavigation\";","map":{"version":3,"sources":["F:/React Udemy/Meetup page Nextjs/pages/index.js"],"names":["MainNavigation"],"mappings":"AAAA,OAAOA,cAAP,MAA2B,qCAA3B","sourcesContent":["import MainNavigation from \"../components/layout/MainNavigation\";"]},"metadata":{},"sourceType":"module"}
