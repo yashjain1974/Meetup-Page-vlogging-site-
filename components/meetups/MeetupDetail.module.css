@@ -1,7 +1,30 @@
 .detail {
     text-align: center;
+    color: rgb(64, 8, 8);
+    font-size: large;
+    font-weight: 600;
+    background-color: bisque;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+
+
 }
 
 .detail img {
     width: 100%;
+
+    padding: 5px;
+}
+
+.detail address {
+    background-color: black;
+    color: wheat;
+
+}
+
+.detail h1 {
+    background-color: black;
+    color: wheat;
 }

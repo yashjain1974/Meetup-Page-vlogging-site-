@@ -1,17 +1,20 @@
 import classes from "./MainNavigation.module.css";
+import { useState } from "react";
 import Link from "next/link";
 
 function MainNavigation() {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>React Meetups</div>
+      <Link href="/">
+        <div className={classes.logo}>V-Meet </div>
+      </Link>
       <nav>
         <ul>
           <li>
             <Link href="/">All Meetups</Link>
           </li>
           <li>
-            <Link href="/new-meetup">Add New Meetup</Link>
+            <Link href="/new-meetup">Add Meetup</Link>
           </li>
         </ul>
       </nav>

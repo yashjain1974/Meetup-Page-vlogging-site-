@@ -1,12 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@400;700&display=swap');
 
+
 * {
   box-sizing: border-box;
 }
 
 body {
+
   font-family: 'Open Sans', 'Lato', sans-serif;
+  height: 100%;
+  background-color: antiquewhite;
   margin: 0;
+
+}
+
+body::after {
+  content: "";
+  background-image: url('../images/bg2.jpg');
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 h1,
@@ -16,4 +39,9 @@ h4,
 h5,
 h6 {
   font-family: 'Lato', sans-serif;
+}
+
+.loading {
+  align-items: center;
+  text-align: center;
 }

@@ -1,8 +1,10 @@
 import { useRouter } from "next/router";
+import React from "react";
+import Head from "next/head";
 import NewMeetupForm from "../../components/meetups/NewMeetupForm";
 const NewMeetup = (props) => {
+  const router = useRouter();
   const onAddMeetupHandler = async (enteredData) => {
-    const router = useRouter();
     const response = await fetch("/api/new-meetup", {
       method: "POST",
       body: JSON.stringify(enteredData),
@@ -14,6 +16,17 @@ const NewMeetup = (props) => {
     console.log(data);
     router.push("/");
   };
-  return <NewMeetupForm onAddMeetup={onAddMeetupHandler}></NewMeetupForm>;
+  return (
+    <React.Fragment>
+      <Head>
+        <title>Meetup:Add new Meetup</title>
+        <meta
+          name="description"
+          content="Browse this awesome vlogging site"
+        ></meta>
+      </Head>
+      <NewMeetupForm onAddMeetup={onAddMeetupHandler}></NewMeetupForm>;
+    </React.Fragment>
+  );
 };
 export default NewMeetup;

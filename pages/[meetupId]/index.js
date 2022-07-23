@@ -1,9 +1,14 @@
 import React, { Fragment } from "react";
+import Head from "next/head";
 import { MongoClient, ObjectId } from "mongodb";
 import MeetupDetail from "../../components/meetups/MeetupDetail";
 const MeetupDetails = (props) => {
   return (
     <Fragment>
+      <Head>
+        <title>Meetup: {props.meetupData.title}</title>
+        <meta name="description" content={props.meetupData.description}></meta>
+      </Head>
       <MeetupDetail
         image={props.meetupData.image}
         title={props.meetupData.title}
@@ -16,7 +21,7 @@ const MeetupDetails = (props) => {
 
 export async function getStaticPaths() {
   const client = await MongoClient.connect(
-    "mongodb+srv://yash:rzE07HaQWX1yiRd2@cluster0.wz0i35s.mongodb.net/meetups?retryWrites=true&w=majority"
+    "mongodb+srv://yash:bh0UtSpeVPh5qdhN@cluster0.wz0i35s.mongodb.net/meetups?retryWrites=true&w=majority"
   );
   //database
   const db = client.db();
@@ -38,7 +43,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const meetupId = context.params.meetupId;
   const client = await MongoClient.connect(
-    "mongodb+srv://yash:rzE07HaQWX1yiRd2@cluster0.wz0i35s.mongodb.net/meetups?retryWrites=true&w=majority"
+    "mongodb+srv://yash:bh0UtSpeVPh5qdhN@cluster0.wz0i35s.mongodb.net/meetups?retryWrites=true&w=majority"
   );
   //database
   const db = client.db();
