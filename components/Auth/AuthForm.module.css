@@ -73,9 +73,9 @@
 
 .actions .toggle:hover {
   /* background-color: transparent; */
-  color: #dcd2e3;
+  color: #e3d2d2;
 }
 
 .invalid {
-  color: rgb(16, 1, 1);
+  color: rgb(252, 4, 4);
 }
