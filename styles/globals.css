@@ -9,7 +9,7 @@ body {
 
   font-family: 'Open Sans', 'Lato', sans-serif;
   height: 100%;
-  background-image: linear-gradient(180deg, rgb(223, 217, 217),rgb(144, 189, 208));
+  background-image: linear-gradient(180deg, rgb(223, 217, 217), rgb(144, 189, 208));
   margin: 0;
 
 }
@@ -45,23 +45,26 @@ h6 {
   align-items: center;
   text-align: center;
 }
-.active{
-  
+
+.active {
+
   padding: 3px;
   color: bisque;
   border: 2px solid rgb(23, 22, 22);
   background-color: rgb(16, 5, 1);
- 
-  
-  
- 
-  
+
+
+
+
+
 }
-.active:hover{
+
+.active:hover {
   color: antiquewhite;
 }
+
 @media only screen and (max-width: 768px) {
-  .loading{
+  .loading {
     align-items: center;
 
   }

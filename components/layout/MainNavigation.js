@@ -1,5 +1,5 @@
 import classes from "./MainNavigation.module.css";
-import {  useContext } from "react";
+import { useContext } from "react";
 import AuthContext from "../../store/auth-context";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -7,16 +7,13 @@ import LoadingSpinner from "../ui/LoadingSpinner";
 
 function MainNavigation() {
   const authCtx = useContext(AuthContext);
-  
-  const router=useRouter();
-  console.log(authCtx);
+
+  const router = useRouter();
+
   const logoutHandler = () => {
-    
     authCtx.logout();
-   
-    router.replace('/');
-    
-   
+
+    router.replace("/");
   };
 
   const isLoggedIn = authCtx.isLoggedIn;
@@ -27,25 +24,26 @@ function MainNavigation() {
       </Link>
       <nav>
         <ul>
-          <li className={router.pathname=="/"?"active":""}>
+          <li className={router.pathname == "/" ? "active" : ""}>
             <Link href="/">All Meetups</Link>
           </li>
           {isLoggedIn && (
-            <li className={router.pathname=="/new-meetup"?"active":""}>
+            <li className={router.pathname == "/new-meetup" ? "active" : ""}>
               <Link href="/new-meetup">Add Meetup</Link>
             </li>
           )}
           {!isLoggedIn && (
-            <li className={router.pathname=="/auth"?"active":""}>
+            <li className={router.pathname == "/auth" ? "active" : ""}>
               <Link href="/auth">Login</Link>
             </li>
           )}
           {isLoggedIn && (
             <li>
-              <button className={classes.btn} onClick={logoutHandler}>Logout</button>
+              <button className={classes.btn} onClick={logoutHandler}>
+                Logout
+              </button>
             </li>
           )}
-         
         </ul>
       </nav>
     </header>

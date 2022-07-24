@@ -1,14 +1,14 @@
 import { useState, useRef, useContext } from "react";
 
-import AuthContext from "../../store/auth-context"
-import {useRouter} from'next/router';
+import AuthContext from "../../store/auth-context";
+import { useRouter } from "next/router";
 import LoadingSpinner from "../ui/LoadingSpinner";
 
 import classes from "./AuthForm.module.css";
 
 const AuthForm = () => {
-  const router=useRouter();
-  
+  const router = useRouter();
+
   const [isLogin, setIsLogin] = useState(true);
   const [isweekPassword, setisWeekPassword] = useState(false);
   const [isweekPasswordMes, setisWeekPasswordMes] = useState("");
@@ -31,8 +31,6 @@ const AuthForm = () => {
       },
     })
       .then((res) => {
-        
-       
         if (res.ok) {
           return res.json();
         } else {
@@ -42,8 +40,6 @@ const AuthForm = () => {
               errorMessage = data.error.message;
               setIsLoading(false);
               throw new Error(errorMessage);
-
-              
             }
           });
         }
@@ -53,13 +49,10 @@ const AuthForm = () => {
           new Date().getTime() + +data.expiresIn * 1000
         );
         Authctx.login(data.idToken, expirationTime.toISOString());
-        router.replace('/');
+        router.replace("/");
         setIsLoading(false);
-        
-        
       })
       .catch((err) => {
-        
         setisWeekPassword(true);
         setisWeekPasswordMes(err.message);
       });
@@ -76,7 +69,6 @@ const AuthForm = () => {
     };
     setIsLoading(true);
     if (isLogin) {
-      
       url =
         "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBaVgeKQ5_JTkezHpgiY-xBam1HfRU5N6w";
       fetchUserDetail(data, url);
@@ -111,7 +103,11 @@ const AuthForm = () => {
           {!isLoading && (
             <button>{isLogin ? "Login" : "Create Account"}</button>
           )}
-          {isLoading && <div className="loading"><LoadingSpinner></LoadingSpinner></div>}
+          {isLoading && (
+            <div className="loading">
+              <LoadingSpinner></LoadingSpinner>
+            </div>
+          )}
 
           <button
             type="button"
