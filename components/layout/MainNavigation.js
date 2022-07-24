@@ -1,16 +1,24 @@
 import classes from "./MainNavigation.module.css";
-import { useState, useContext } from "react";
+import {  useContext } from "react";
 import AuthContext from "../../store/auth-context";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import LoadingSpinner from "../ui/LoadingSpinner";
 
 function MainNavigation() {
   const authCtx = useContext(AuthContext);
+  
+  const router=useRouter();
   console.log(authCtx);
   const logoutHandler = () => {
+    
     authCtx.logout();
+   
+    router.replace('/');
+    
+   
   };
-const router=useRouter();
+
   const isLoggedIn = authCtx.isLoggedIn;
   return (
     <header className={classes.header}>
@@ -23,7 +31,7 @@ const router=useRouter();
             <Link href="/">All Meetups</Link>
           </li>
           {isLoggedIn && (
-            <li>
+            <li className={router.pathname=="/new-meetup"?"active":""}>
               <Link href="/new-meetup">Add Meetup</Link>
             </li>
           )}
@@ -37,6 +45,7 @@ const router=useRouter();
               <button className={classes.btn} onClick={logoutHandler}>Logout</button>
             </li>
           )}
+         
         </ul>
       </nav>
     </header>

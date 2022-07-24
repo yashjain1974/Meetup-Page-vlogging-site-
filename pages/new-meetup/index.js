@@ -19,7 +19,7 @@ const NewMeetup = (props) => {
   return (
     <React.Fragment>
       <Head>
-        <title>Meetup:Add new Meetup</title>
+        <title>V-Meet:Add new Meetup</title>
         <meta
           name="description"
           content="Browse this awesome vlogging site"

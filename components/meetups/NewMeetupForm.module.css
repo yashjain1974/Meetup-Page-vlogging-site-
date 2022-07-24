@@ -1,5 +1,7 @@
 .form {
   padding: 1rem;
+  /* border: 3px solid black; */
+  background-color: rgba(17, 65, 74, 0.306);
  
 }
 
@@ -9,9 +11,10 @@
 }
 
 .control label {
+  text-align: center;
   display: block;
   font-weight: bold;
-  color:#000000;
+  color:#e5e5c7;
   margin-bottom: 0.5rem;
 }
 
@@ -23,6 +26,7 @@
   border: 1px solid #ccc;
   padding: 0.25rem;
   width: 100%;
+  background-color: rgb(243, 238, 238);
 }
 
 .actions {

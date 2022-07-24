@@ -14,7 +14,7 @@
 .logo {
   font-size: 2.5rem;
   font-family: 'Lobster', cursive;
-  
+
   color: rgb(237, 245, 236);
   cursor: pointer;
 
@@ -46,32 +46,34 @@
 .header a:hover,
 .header a:active,
 .header a.active {
-  color: rgb(26, 24, 24);
+  color: rgb(122, 171, 171);
 }
 
-.btn{
+.btn {
   padding: 10px;
   border-radius: 40%;
   background-color: rgb(20, 108, 108);
   font-family: 'Lobster', cursive;
   font-size: 20px;
-  color:rgb(184, 233, 202);
+  color: rgb(184, 233, 202);
   cursor: pointer;
-  
+
 
 
 }
-.btn:hover{
-  background-color: rgb(104, 140, 140);
+
+.btn:hover {
+  background-color: rgb(128, 186, 186);
+  color: black;
 
 
 }
 
 @media only screen and (max-width: 768px) {
   .logo {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: rgb(231, 245, 231);
-    font-weight: bold;
+    font-weight: 500;
   }
 
   .header li {
@@ -86,26 +88,29 @@
     font-size: 1rem;
     color: rgb(184, 233, 202);
   }
+
   .header a:hover,
-.header a:active,
-.header a.active {
-  color: rgb(26, 24, 24);
-}
-.btn{
-  padding: 10px;
-  border-radius: 40%;
-  background-color: rgb(20, 108, 108);
-  font-family: 'Lobster', cursive;
-  font-size: 10px;
-  color:rgb(184, 233, 202);
-  cursor: pointer;
-  
+  .header a:active,
+  .header a.active {
+    color: rgb(37, 180, 68);
+  }
+
+  .btn {
+    padding: 10px;
+    border-radius: 40%;
+    background-color: rgb(20, 108, 108);
+    font-family: 'Lobster', cursive;
+    font-size: 10px;
+    color: rgb(184, 233, 202);
+    cursor: pointer;
 
 
-}
-.btn:hover{
-  background-color: rgb(104, 140, 140);
+
+  }
+
+  .btn:hover {
+    background-color: rgb(104, 140, 140);
 
 
-}
+  }
 }

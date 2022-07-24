@@ -31,7 +31,7 @@ const HomePage = (props) => {
   return (
     <React.Fragment>
       <Head>
-        <title>Meetup:A vlog</title>
+        <title>V-Meet: HomePage</title>
         <meta
           name="description"
           content="Browse this awesome vlogging site"
