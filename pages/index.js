@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { MongoClient } from "mongodb";
 import Head from "next/head";
 import MeetupList from "../components/meetups/MeetupList";
-
+import ScrollButton from "../components/ui/ScrollButton";
 // const DUMMY_MEETUP = [
 //   {
 //     id: "m1",
@@ -39,6 +39,7 @@ const HomePage = (props) => {
       </Head>
 
       <MeetupList meetups={props.meetups}></MeetupList>
+      <ScrollButton></ScrollButton>
     </React.Fragment>
   );
 };

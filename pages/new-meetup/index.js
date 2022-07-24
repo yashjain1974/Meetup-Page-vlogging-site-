@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import Head from "next/head";
 import NewMeetupForm from "../../components/meetups/NewMeetupForm";
+import ScrollButton from "../../components/ui/ScrollButton";
 const NewMeetup = (props) => {
   const router = useRouter();
   const onAddMeetupHandler = async (enteredData) => {
@@ -26,6 +27,7 @@ const NewMeetup = (props) => {
         ></meta>
       </Head>
       <NewMeetupForm onAddMeetup={onAddMeetupHandler}></NewMeetupForm>;
+     
     </React.Fragment>
   );
 };
