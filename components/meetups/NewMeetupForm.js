@@ -34,6 +34,7 @@ function NewMeetupForm(props) {
 
   return (
     <React.Fragment>
+      <div className={classes.bdy}>
       {(isLoading && (
         <div className="loading">
           <LoadingSpinner></LoadingSpinner>{" "}
@@ -66,6 +67,7 @@ function NewMeetupForm(props) {
           </div>
         </form>
       )}
+      </div>
     </React.Fragment>
   );
 }
