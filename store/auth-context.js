@@ -32,7 +32,7 @@ const retreiveToken = () => {
   }
 };
 export const AuthContextProvider = (props) => {
-  const tokenData = retreiveToken();
+  const tokenData =retreiveToken();
   let initializeToken;
   if (tokenData) {
     initializeToken = tokenData.token;
