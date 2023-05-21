@@ -23,7 +23,7 @@ const NewMeetup = (props) => {
         <title>V-Meet:Add new Meetup</title>
         <meta
           name="description"
-          content="Browse this awesome vlogging site"
+          content="Browse awesome vlogging site"
         ></meta>
       </Head>
       <NewMeetupForm onAddMeetup={onAddMeetupHandler}></NewMeetupForm>;

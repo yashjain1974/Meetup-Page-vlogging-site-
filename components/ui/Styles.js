@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
   
 export const Button = styled.div`
-   position: fixed; 
+   position: fixed ; 
    width: 100%;
    left: 85%;
    bottom: 40px;

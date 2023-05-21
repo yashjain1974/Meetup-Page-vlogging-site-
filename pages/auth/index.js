@@ -6,7 +6,7 @@ const AuthPage = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>V-Meet : Login</title>
+        <title>V-Meet: Login</title>
       </Head>
       <AuthForm />
     </React.Fragment>

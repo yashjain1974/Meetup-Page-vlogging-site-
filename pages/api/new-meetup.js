@@ -18,7 +18,7 @@ const DataHandler = async (req, res) => {
 
     //closing connection
     client.close();
-    res.status(201).json({ message: "Data Inserted Successfully" });
+    res.status(201).json({ message: "Data inserted Successfully" });
   }
 };
 export default DataHandler;

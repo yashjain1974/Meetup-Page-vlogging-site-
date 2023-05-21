@@ -58,7 +58,7 @@ export async function getStaticProps() {
   //database
 
   const db = client.db();
-  //table
+  //table and functions
   const meetUpsTable = db.collection("meetups");
   //inserting data
   const meetups = await meetUpsTable.find().toArray();
